@@ -1,0 +1,569 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #fff;
+  scrollbar-gutter: stable;
+  background-color: #dbeaf1;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+nav {
+  min-width: 100vw;
+  height: 20px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: initial;
+  backdrop-filter: blur(10px);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  list-style-type: none;
+}
+
+.menu {
+  width: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  animation: expandMenu 1.5s ease-out 0s forwards;
+}
+
+/* Keyframes for width expansion */
+@keyframes expandMenu {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+nav a {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  color: blue;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: blue;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+  animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+}
+
+@keyframes heartbeat116 {
+  0%,
+  100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+button {
+  background-color: blue;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  box-sizing: border-box;
+  padding: 12.5px;
+  border-radius: 5px;
+  max-width: 170px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 10px rgba(177, 173, 173, 0.5);
+}
+
+nav button a {
+  color: black;
+}
+
+.container {
+  max-width: 100vw;
+  display: flex;
+  padding: 9%;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/BG.jpg);
+  background-size: cover;
+}
+
+aside,
+article {
+  max-width: 50%;
+  min-height: 100%;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 25px;
+  padding: 10px;
+}
+
+aside p,
+button {
+  padding: 10px;
+}
+
+aside button {
+  font-size: 20px;
+  box-shadow: 0 0 10px 10px rgba(177, 173, 173, 0.6);
+}
+
+article {
+  display: grid;
+  grid: center;
+  margin-left: 30px;
+}
+
+article img {
+  min-height: 440px;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 50%;
+  border: 5px dashed black;
+  box-shadow: 0 0 10px 10px rgba(177, 173, 173, 0.6);
+}
+
+.Education {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.Education h1 {
+  padding: 20px;
+  font-size: 35px;
+  text-decoration: underline;
+  border-radius: 5px;
+}
+
+.Education-details {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Education-details div:hover {
+  background-color: lightblue;
+  box-shadow: 0 0 10px 10px rgba(177, 173, 173, 0.6);
+}
+
+.Education-details i {
+  margin: 50px;
+}
+
+.Education-details div {
+  min-height: 200px;
+  min-width: 200px;
+  background-color: inherit;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: darksalmon;
+  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.certifications {
+  min-height: 100px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin: 3%;
+}
+
+.certifications li {
+  padding: 10px;
+  list-style-type: square;
+}
+
+.Achivements {
+  max-height: 100px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  margin: 3%;
+}
+
+.Achivements li {
+  padding: 10px;
+  list-style-type: square;
+}
+
+footer {
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 5%;
+}
+
+footer p,
+footer h2 {
+  color: blue;
+  margin: 5px;
+}
+
+.skills {
+  max-width: 100vw;
+  min-height: 110px;
+  text-align: center;
+  padding-top: 70px;
+  font-size: larger;
+}
+
+.skills h1 {
+  text-decoration: underline;
+}
+
+.skills ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 3%;
+}
+
+i li {
+  padding: 10px;
+}
+
+.skills-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.skills-list {
+  display: flex;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 64px;
+  animation: scroll-loop 20s linear infinite;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+}
+
+.scroll-track li {
+  white-space: nowrap;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-track i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links li {
+  margin: 10px;
+}
+
+.social-links a {
+  font-size: 40px;
+  color: blue;
+}
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+
+/* ------------------- MOBILE (360px–600px) ------------------- */
+@media (min-width: 320px) and (max-width: 600px) {
+  nav {
+    /* flex-direction: column; */
+    height: auto;
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav h2 {
+    font-size: 20px;
+  }
+
+  nav ul.menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    animation: none;
+    display: none;
+  }
+
+  nav li h3 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .Download {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 15% 5%;
+    gap: 20px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+  }
+
+  aside,
+  article {
+    max-width: 100%;
+  }
+
+  aside h1 {
+    font-size: 24px;
+  }
+
+  aside p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  article {
+    margin: 15px;
+    padding: 0;
+  }
+
+  article img {
+    width: 95%;
+    /* height: 60%; */
+    margin: 0 auto;
+    display: block;
+    border: 3px dashed black;
+  }
+
+  .Education-details div {
+    min-width: 250px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .Education-details i{
+    margin:10px;
+  }
+
+  .certifications,
+  .Achivements {
+    font-size: 16px;
+    margin: 5% 0;
+    padding: 0 10px;
+  }
+
+  .skills {
+    font-size: 18px;
+  }
+
+  .scroll-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+  }
+
+  .scroll-track li {
+    font-size: 18px;
+    scroll-snap-align: start;
+  }
+
+  footer h2 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #backToTopBtn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+/* ------------------- TABLET (601px–768px) ------------------- */
+@media (min-width: 601px) and (max-width: 768px) {
+  nav {
+    padding: 30px;
+  }
+
+  nav ul.menu {
+    /* width: 60%;
+    animation: none; */
+    display:none;
+  }
+
+  nav h2 {
+    font-size: 24px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* padding: 12%; */
+  }
+
+  aside {
+    font-size: 20px;
+    width: 90%;
+  }
+
+  article {
+    margin: 15px;
+    padding: 0;
+    width:100%;
+    display:flex;
+    justify-content: center;
+
+  }
+
+  article img {
+    width: 350px;
+    height: auto;
+  }
+
+  .Education-details div {
+    min-width: 300px;
+    font-size: 18px;
+  }
+
+  .Education-details i{
+    margin:30px;
+  }
+
+  .certifications,
+  .Achivements {
+    font-size: 18px;
+  }
+
+  .skills {
+    font-size: 20px;
+  }
+
+  .scroll-track li {
+    font-size: 20px;
+  }
+}
+
+/* ------------------- DESKTOP (769px and above) ------------------- */
+@media (min-width: 769px) {
+  nav {
+    padding: 35px 60px;
+  }
+
+  .container {
+    flex-direction: row;
+    padding: 9%;
+  }
+
+  aside {
+    font-size: 25px;
+  }
+
+  article img {
+    width: 450px;
+    height: auto;
+  }
+
+  .Education-details div {
+    min-width: 350px;
+  }
+
+  .skills {
+    font-size: 22px;
+  }
+}
