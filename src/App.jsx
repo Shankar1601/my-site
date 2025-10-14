@@ -27,7 +27,7 @@ function App() {
             download="Shankar's resume"
             class="Download"
           >
-            Download Resume
+            <span>Download</span> <i class="fa-solid fa-download"></i> Resume
           </a>
         </button>
       </nav>
@@ -57,7 +57,7 @@ function App() {
           <div>
             <h2>Post graduate</h2>
             <p>
-              I graduated with a degree in Msc.Information Technology from
+              I graduated with a degree in Msc.Information Technology from <br/>
               UNIVERSITY OF MADRAS.
             </p>
             <p>From 2022 To 2024</p>

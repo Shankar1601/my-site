@@ -43,6 +43,7 @@ nav {
   position: fixed;
   background-color: initial;
   backdrop-filter: blur(10px);
+  z-index: 100;
 }
 
 nav ul {
@@ -122,6 +123,7 @@ nav button a {
   color: black;
 }
 
+
 .container {
   max-width: 100vw;
   display: flex;
@@ -130,6 +132,23 @@ nav button a {
   justify-content: center;
   background-image: url(/BG.jpg);
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(1.5px);
+  transform: scale(1.1);
+  z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+.container > *{
+  position: relative;
+  z-index: 1; /* Ensure the content is above the overlay */
 }
 
 aside,
@@ -217,6 +236,7 @@ article img {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 
 .certifications {
   min-height: 100px;
@@ -387,8 +407,12 @@ i li {
     margin: 5px 0;
   }
 
-  .Download {
+  nav button span{
     display: none;
+  }
+
+  nav button{
+    padding:7px;
   }
 
   .container {
@@ -403,6 +427,11 @@ i li {
   aside,
   article {
     max-width: 100%;
+    height: 70vh;
+  }
+
+  aside  button {
+    padding:8px;
   }
 
   aside h1 {
@@ -420,9 +449,8 @@ i li {
   }
 
   article img {
-    width: 95%;
-    /* height: 60%; */
-    margin: 0 auto;
+    width: 85vw;
+    /* height: auto; */
     display: block;
     border: 3px dashed black;
   }
@@ -440,8 +468,8 @@ i li {
   .certifications,
   .Achivements {
     font-size: 16px;
-    margin: 5% 0;
-    padding: 0 10px;
+    margin: 5%;
+    padding: 0px 2%;
   }
 
   .skills {
@@ -488,6 +516,10 @@ i li {
 
   nav h2 {
     font-size: 24px;
+  }
+  
+  nav button span{
+    display: none;
   }
 
   .container {
@@ -543,6 +575,10 @@ i li {
 @media (min-width: 769px) {
   nav {
     padding: 35px 60px;
+  }
+
+  nav button a i{
+    display: none !important;
   }
 
   .container {
