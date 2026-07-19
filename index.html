@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Removed %PUBLIC_URL% -->
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <!-- CHELSEA System: Force mobile browser UI to match the void canvas -->
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Shankara. — Full Stack Developer based in Chennai, IN."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Removed %PUBLIC_URL% -->
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
 
     <!-- Google Fonts: Inter (Fallback for Neue Haas Unica Pro) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,5 +37,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- Vite requires the script tag to be in index.html -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
