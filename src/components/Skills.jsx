@@ -7,7 +7,7 @@ const Skills = () => {
       id: 1,
       title: "Frontend Development",
       icon: "fa-laptop-code",
-      skills: ["React.js", "JavaScript (ES6)", "HTML5", "CSS3", "Bootstrap"]
+      skills: ["React.js", "JavaScript (ES6)", "HTML5", "CSS3", "Bootstrap", "jQuery"]
     },
     {
       id: 2,
@@ -19,13 +19,13 @@ const Skills = () => {
       id: 3,
       title: "Database & Cloud",
       icon: "fa-cloud",
-      skills: ["PostgreSQL", "MySQL", "Supabase", "AWS EC2", "AWS S3"]
+      skills: ["PostgreSQL", "MySQL", "Supabase", "AWS EC2", "AWS S3", "GitHub Pages"]
     },
     {
       id: 4,
       title: "Tools & Workflow",
       icon: "fa-screwdriver-wrench",
-      skills: ["Git", "GitHub", "VS Code", "Hostinger", "XAMPP"]
+      skills: ["Git", "GitHub", "VS Code", "Hostinger", "XAMPP", "Postman"]
     }
   ];
 

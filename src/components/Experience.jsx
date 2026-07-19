@@ -9,10 +9,10 @@ const Experience = () => {
       company: "Verloom Leather Pvt Ltd",
       duration: "Mar 2026 - Present",
       description: [
-        "Independently developed and deployed multiple live business websites including veracargo.com and alaikha.in.",
-        "Managed end-to-end cloud deployment and hosting configurations using AWS EC2, AWS S3 Bucket, Hostinger, and Supabase.",
-        "Handled bug fixes, feature enhancements, and production support for multiple company platforms.",
-        "Operated as the primary developer across frontend, backend, database, and deployment workflows in a startup environment."
+        "Independently designed, developed, and deployed multiple production-grade business and logistics websites, including veracargo.com and alaikha.in.",
+        "Delivered complete full-stack solutions covering frontend, backend, databases, APIs, deployment, hosting, and maintenance.",
+        "Managed cloud hosting, server deployment, storage, SSL, domains, and production updates using AWS EC2, AWS S3, Hostinger, and Supabase.",
+        "Fixed production issues, optimized application performance, and collaborated with internal stakeholders to deliver business requirements."
       ],
       tech: ["React", "Node.js", "AWS EC2", "AWS S3", "Supabase", "Hostinger"]
     },
@@ -22,9 +22,9 @@ const Experience = () => {
       company: "University of Madras",
       duration: "Academic Internship",
       description: [
-        "Designed and developed a grading system to calculate entrance examination and UG semester marks for university admissions.",
-        "Implemented robust student data storage using a database server to manage academic records efficiently.",
-        "Utilized Django ORM for seamless database interactions and structured backend logic."
+        "Designed and developed a grading system to calculate entrance examination and UG semester marks for academic evaluation and university admissions.",
+        "Designed database structures, implemented business logic, and automated student record management.",
+        "Utilized Django ORM and MySQL for seamless database interactions and structured backend logic."
       ],
       tech: ["Python", "Django", "MySQL", "HTML5", "CSS3"]
     }

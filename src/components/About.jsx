@@ -10,18 +10,18 @@ const About = () => {
         {/* Narrative Biography */}
         <div className="about-text glass-panel">
           <p>
-            I am a results-driven Full Stack Developer based in Chennai, Tamil Nadu, 
-            passionate about building responsive, database-driven web applications. 
-            With hands-on experience in a dynamic startup environment, I specialize in 
-            transforming complex requirements into scalable, secure, and user-friendly 
-            digital solutions.
+            I am a results-oriented Full Stack Developer based in Chennai, Tamil Nadu, 
+            passionate about delivering complete web applications from initial planning and UI 
+            implementation to database design, deployment, and ongoing maintenance. 
+            With professional experience acting as the primary developer in a startup environment, 
+            I specialize in building scalable and secure business solutions.
           </p>
           <p>
-            My technical foundation spans across modern frameworks including React, 
-            Python, Django, Node.js, and PostgreSQL. From conceptualizing UI/UX to 
-            architecting secure backend logic, managing cloud deployments (AWS, Hostinger), 
-            and maintaining production applications, I am equipped to handle the complete 
-            project lifecycle independently.
+            My technical foundation spans across modern frameworks including React, Python, 
+            Django, Node.js, and PostgreSQL. I have a strong understanding of responsive web design, 
+            performance optimization, API integration, Git workflows, and production support. 
+            From architecting secure backend logic to managing cloud deployments (AWS, Hostinger), 
+            I am equipped to handle the complete project lifecycle independently.
           </p>
           <p>
             I am continuously upgrading my skills to stay at the forefront of web 

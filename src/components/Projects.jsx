@@ -7,7 +7,7 @@ const Projects = () => {
       id: 1,
       title: "Cinema Industry Recruitment Platform",
       icon: "fa-film",
-      description: "An end-to-end recruitment web application tailored for the cinema and media industry. Enables recruiters to post requirements and browse verified profiles of creative professionals with structured registration and secure backend logic.",
+      description: "An end-to-end recruitment platform tailored for the cinema and media industry. Features secure user authentication, database integration, a responsive UI, and a scalable backend enabling recruiters to browse verified professional profiles.",
       tech: ["PHP", "JavaScript", "Bootstrap", "MySQL"],
       link: "#"
     },
@@ -23,7 +23,7 @@ const Projects = () => {
       id: 3,
       title: "React Portfolio Website",
       icon: "fa-user-astronaut",
-      description: "A fully responsive personal portfolio showcasing projects and skills. Built with a component-based UI architecture and deployed using GitHub Pages with a Git-based version control workflow.",
+      description: "Built and deployed a fully responsive personal portfolio showcasing projects and skills. Features a modern UI constructed with reusable React.js components and managed via a Git-based version control workflow.",
       tech: ["React.js", "CSS3", "GitHub Pages"],
       link: "https://shankar1601.github.io/my-site/"
     },
@@ -31,7 +31,7 @@ const Projects = () => {
       id: 4,
       title: "Business Landing Page",
       icon: "fa-briefcase",
-      description: "Developed a modern, responsive business landing page for a resume-building service. Ensured mobile responsiveness and cross-browser compatibility.",
+      description: "Designed and deployed a responsive business landing page for a resume-building service. Engineered to be fully cross-browser compatible and heavily optimized for branding, performance, and mobile devices.",
       tech: ["HTML5", "CSS3", "JavaScript"],
       link: "https://shankar1601.github.io/interview/"
     }
