@@ -1,84 +1,53 @@
 /* src/components/About.css */
-.about-section {
-  position: relative;
+.chelsea-section {
+  width: 100%;
+  padding: 0 var(--spacing-32);
+  margin-bottom: var(--spacing-96);
+  background-color: var(--color-void-black);
 }
 
-.about-container {
+.text-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 120px 1fr;
+  gap: var(--spacing-32);
+  /* Intentionally no max-width to obey full-bleed layout rules */
 }
 
-@media (min-width: 900px) {
-  .about-container {
-    grid-template-columns: 3fr 2fr;
-    gap: 60px;
-  }
+.meta-column {
+  /* 16px left padding for region/metadata labels as per CHELSEA spec */
+  padding-left: var(--spacing-16);
 }
 
-.about-text {
-  padding: 30px;
-  font-size: 1.05rem;
-  color: var(--text-secondary);
+.meta-label {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-bold);
+  /* The .text-accent class handles the #4490ff color */
+  display: block;
 }
 
-.about-text p {
-  margin-bottom: 20px;
+.content-column p {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-pure-white);
+  margin-bottom: var(--spacing-16);
 }
 
-.about-text p:last-child {
+.content-column p:last-child {
   margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
-  .about-text {
-    padding: 40px;
-    font-size: 1.15rem;
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .chelsea-section {
+    padding: 0 var(--spacing-16);
   }
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-@media (min-width: 600px) {
-  .about-stats {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 900px) {
-  .about-stats {
+  
+  .text-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-16);
   }
-}
-
-.stat-card {
-  padding: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: float 5s ease-in-out infinite;
-}
-
-.stat-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4));
-}
-
-.stat-card h3 {
-  font-size: 1.3rem;
-  color: var(--text-primary);
-  margin-bottom: 5px;
-}
-
-.stat-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  
+  .meta-column {
+    padding-left: 0;
+  }
 }

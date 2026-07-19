@@ -1,186 +1,70 @@
 /* src/components/Hero.css */
 .hero-section {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 40px;
-  padding-top: 120px; /* Offset for fixed navbar */
-}
-
-@media (min-width: 900px) {
-  .hero-section {
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    padding-top: 80px;
-  }
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-@media (min-width: 900px) {
-  .hero-content {
-    align-items: flex-start;
-    text-align: left;
-  }
-}
-
-.hero-greeting {
-  font-size: 1.5rem;
-  color: var(--text-secondary);
-  margin-bottom: 5px;
-  font-weight: 300;
-}
-
-.hero-name {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-  text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-}
-
-@media (min-width: 768px) {
-  .hero-name {
-    font-size: 5rem;
-  }
-}
-
-.hero-title {
-  font-size: 1.8rem;
-  color: var(--accent-purple);
-  margin-bottom: 30px;
-  text-shadow: 0 0 10px rgba(157, 0, 255, 0.4);
-}
-
-.hero-description {
-  padding: 20px;
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin-bottom: 35px;
-  text-align: center;
-}
-
-@media (min-width: 900px) {
-  .hero-description {
-    text-align: left;
-    font-size: 1.2rem;
-  }
-}
-
-.hero-actions {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.btn-primary, .btn-secondary {
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background: rgba(0, 243, 255, 0.1);
-  border: 1px solid var(--accent-cyan);
-  color: var(--text-primary);
-  box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
-}
-
-.btn-primary:hover {
-  background: rgba(0, 243, 255, 0.2);
-  box-shadow: 0 0 25px rgba(0, 243, 255, 0.5), inset 0 0 10px rgba(0, 243, 255, 0.3);
-  transform: translateY(-3px);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--text-secondary);
-  transform: translateY(-3px);
-}
-
-.hero-socials {
-  display: flex;
-  gap: 20px;
-}
-
-.hero-socials a {
-  font-size: 1.8rem;
-  color: var(--text-muted);
-  transition: all 0.3s ease;
-}
-
-.hero-socials a:hover {
-  color: var(--accent-cyan);
-  transform: scale(1.2) translateY(-2px);
-  text-shadow: 0 0 15px var(--accent-cyan);
-}
-
-/* Surreal Visual Styling */
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  /* Assuming the nav is roughly 50px tall, this fills the remaining viewport */
+  height: calc(100vh - 50px);
   position: relative;
+  /* Margin bottom introduces the mandatory 96px gap before the next section */
+  margin-bottom: var(--section-gap);
+  background-color: var(--color-void-black);
 }
 
-.image-wrapper {
+.media-frame {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: 280px;
-  height: 280px;
-  animation: float 6s ease-in-out infinite;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .image-wrapper {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-.glow-ring {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border-radius: 50%;
-  background: conic-gradient(
-    var(--accent-cyan), 
-    var(--accent-purple), 
-    var(--accent-pink), 
-    var(--accent-cyan)
-  );
-  z-index: -1;
-  filter: blur(20px);
-  opacity: 0.7;
-  animation: float 6s ease-in-out infinite reverse;
-}
-
-.profile-img {
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid var(--glass-border);
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+  object-position: center 20%;
+  display: block;
+  border-radius: var(--radius-images);
+}
+
+.hero-wordmark {
+  position: absolute;
+  bottom: var(--spacing-32);
+  left: var(--spacing-32);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.wordmark-line {
+  /* Inherits from .text-display applied in JSX */
+  display: block;
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: var(--spacing-16);
+  right: var(--spacing-16);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  color: var(--color-bone-white);
+  font-weight: var(--font-weight-regular);
+  z-index: 10;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .hero-wordmark {
+    bottom: var(--spacing-16);
+    left: var(--spacing-16);
+    /* Slightly scale down the massive typography on small mobile screens */
+    font-size: var(--text-heading-sm); 
+  }
+
+  .hero-caption {
+    /* Stack differently or adjust inset for mobile */
+    bottom: auto;
+    top: var(--spacing-16);
+    right: var(--spacing-16);
+    text-align: right;
+    max-width: 150px;
+  }
 }

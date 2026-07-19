@@ -3,12 +3,16 @@ import './About.css';
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
-      <h2 className="section-title text-gradient">About Me</h2>
-      
-      <div className="about-container">
-        {/* Narrative Biography */}
-        <div className="about-text glass-panel">
+    <section id="about" className="chelsea-section">
+      <div className="text-grid">
+        
+        {/* Left Column: Minimal metadata label */}
+        <div className="meta-column">
+          <span className="meta-label text-accent">BIO.</span>
+        </div>
+        
+        {/* Right Column: Flowing text block */}
+        <div className="content-column">
           <p>
             I am a results-oriented Full Stack Developer based in Chennai, Tamil Nadu, 
             passionate about delivering complete web applications from initial planning and UI 
@@ -29,26 +33,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Floating Stat Cards */}
-        <div className="about-stats">
-          <div className="stat-card glass-panel">
-            <i className="fa-solid fa-code stat-icon text-gradient"></i>
-            <h3>Full Stack</h3>
-            <p>Frontend & Backend mastery</p>
-          </div>
-          
-          <div className="stat-card glass-panel" style={{ animationDelay: '0.2s' }}>
-            <i className="fa-solid fa-server stat-icon text-gradient"></i>
-            <h3>Cloud & DB</h3>
-            <p>AWS, Supabase, PostgreSQL</p>
-          </div>
-
-          <div className="stat-card glass-panel" style={{ animationDelay: '0.4s' }}>
-            <i className="fa-solid fa-location-dot stat-icon text-gradient"></i>
-            <h3>Chennai</h3>
-            <p>Based in Tamil Nadu, India</p>
-          </div>
-        </div>
       </div>
     </section>
   );

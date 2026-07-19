@@ -7,7 +7,7 @@ const Experience = () => {
       id: 1,
       role: "Full Stack Developer",
       company: "Verloom Leather Pvt Ltd",
-      duration: "Mar 2026 - Present",
+      duration: "MAR 2026 — PRESENT",
       description: [
         "Independently designed, developed, and deployed multiple production-grade business and logistics websites, including veracargo.com and alaikha.in.",
         "Delivered complete full-stack solutions covering frontend, backend, databases, APIs, deployment, hosting, and maintenance.",
@@ -20,7 +20,7 @@ const Experience = () => {
       id: 2,
       role: "In-house Internship",
       company: "University of Madras",
-      duration: "Academic Internship",
+      duration: "ACADEMIC",
       description: [
         "Designed and developed a grading system to calculate entrance examination and UG semester marks for academic evaluation and university admissions.",
         "Designed database structures, implemented business logic, and automated student record management.",
@@ -31,47 +31,41 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="experience-section">
-      <h2 className="section-title text-gradient">Experience</h2>
-      
-      <div className="timeline-container">
-        {experiences.map((exp) => (
-          <div key={exp.id} className="timeline-item">
-            {/* Glowing Timeline Marker */}
-            <div className="timeline-marker">
-              <div className="timeline-dot"></div>
-              <div className="timeline-line"></div>
+    <section id="experience" className="chelsea-section">
+      {experiences.map((exp, index) => (
+        <div key={exp.id} className="experience-block">
+          <div className="text-grid">
+            
+            {/* Left Column: Minimal date label */}
+            <div className="meta-column">
+              <span className="meta-label text-accent">{exp.duration}</span>
             </div>
             
-            {/* Glassmorphic Experience Card */}
-            <div className="timeline-content glass-panel">
-              <div className="timeline-header">
-                <h3 className="timeline-role">{exp.role}</h3>
-                <span className="timeline-date">{exp.duration}</span>
+            {/* Right Column: Role, Company, Description, Tech */}
+            <div className="content-column">
+              <h3 className="text-heading">{exp.role}</h3>
+              <div className="credit-caption">{exp.company}</div>
+              
+              <div className="experience-desc">
+                {exp.description.map((item, i) => (
+                  <p key={i}>{item}</p>
+                ))}
               </div>
               
-              <h4 className="timeline-company text-gradient">{exp.company}</h4>
-              
-              <ul className="timeline-desc">
-                {exp.description.map((item, index) => (
-                  <li key={index}>
-                    <i className="fa-solid fa-angle-right bullet-icon"></i>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="timeline-tech">
-                {exp.tech.map((tech, index) => (
-                  <span key={index} className="tech-badge">
-                    {tech}
-                  </span>
-                ))}
+              {/* Tech Stack rendered as a flowing text block separated by periods */}
+              <div className="roster-listing text-accent">
+                {exp.tech.join('. ')}.
               </div>
             </div>
+            
           </div>
-        ))}
-      </div>
+
+          {/* Hairline divider between entries */}
+          {index < experiences.length - 1 && (
+            <hr className="hairline-divider experience-divider" />
+          )}
+        </div>
+      ))}
     </section>
   );
 };

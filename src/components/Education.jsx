@@ -2,101 +2,66 @@ import React from 'react';
 import './Education.css';
 
 const Education = () => {
-  const educationData = [
+  const educationItems = [
     {
       id: 1,
-      degree: "M.Sc Information Technology",
+      type: "POSTGRAD.",
+      degree: "M.Sc. Information Technology",
       institution: "University of Madras",
-      year: "2022 - 2024"
+      details: ["Focus on advanced software engineering, backend architecture, and database management."]
     },
     {
       id: 2,
-      degree: "Bachelor of Computer Applications (BCA)",
+      type: "UNDERGRAD.",
+      degree: "Bachelor of Computer Applications",
       institution: "Shree Chandraprabhu Jain College",
-      year: "2018 - 2021"
+      details: ["Winner — Inter-Collegiate Science Communication Review Competition (2019)."]
     },
     {
       id: 3,
-      degree: "Higher Secondary Certificate (HSC)",
-      institution: "Vellayan Chettiyar Higher Sec School",
-      year: "2016 - 2018"
-    },
-    {
-      id: 4,
-      degree: "Secondary School Leaving Certificate (SSLC)",
-      institution: "Vellayan Chettiyar Higher Sec School",
-      year: "2015 - 2016"
+      type: "CERT.",
+      degree: "Professional Certifications",
+      institution: "Various Institutions",
+      details: [
+        "Web Development Program — TNSDC",
+        "Full Stack Python — Code99 IT Academy",
+        "IoT Workshop — University of Madras",
+        "Diploma in MS Office"
+      ]
     }
   ];
 
-  const certifications = [
-    "Web Development Program - TNSDC (Jul 2025 - Present)",
-    "Full-Stack Python - Code99 IT Academy (Aug 2024 - Mar 2025)",
-    "IoT Workshop - University of Madras (Mar 2023)",
-    "Diploma in MS Office (Apr 2014 - Jun 2014)"
-  ];
-
-  const achievements = [
-    "Primary developer in a startup environment handling complete web application workflows.",
-    "Successfully deployed and maintained multiple production websites independently.",
-    "Winner - Inter-Collegiate Science Communication Review Competition (2019).",
-    "Participated in NSS State Level Orientation Program."
-  ];
-
   return (
-    <section id="education" className="education-section">
-      <h2 className="section-title text-gradient">Background & Accolades</h2>
-      
-      <div className="education-grid">
-        
-        {/* Formal Education Column */}
-        <div className="edu-column">
-          <h3 className="column-title">
-            <i className="fa-solid fa-graduation-cap text-gradient"></i> Education
-          </h3>
-          
-          <div className="edu-list">
-            {educationData.map((edu) => (
-              <div key={edu.id} className="edu-card glass-panel">
-                <div className="edu-year">{edu.year}</div>
-                <h4 className="edu-degree">{edu.degree}</h4>
-                <p className="edu-institution">{edu.institution}</p>
+    <section id="education" className="chelsea-section">
+      {educationItems.map((item, index) => (
+        <div key={item.id} className="education-block">
+          <div className="text-grid">
+            
+            {/* Left Column: Minimal metadata label */}
+            <div className="meta-column">
+              <span className="meta-label text-accent">{item.type}</span>
+            </div>
+            
+            {/* Right Column: Degree, Institution, and Details */}
+            <div className="content-column">
+              <h3 className="text-heading">{item.degree}</h3>
+              <div className="credit-caption">{item.institution}</div>
+              
+              <div className="experience-desc">
+                {item.details.map((desc, i) => (
+                  <p key={i}>{desc}</p>
+                ))}
               </div>
-            ))}
+            </div>
+            
           </div>
+
+          {/* Hairline divider between entries */}
+          {index < educationItems.length - 1 && (
+            <hr className="hairline-divider experience-divider" />
+          )}
         </div>
-
-        {/* Certifications & Achievements Column */}
-        <div className="acc-column">
-          
-          <div className="acc-section">
-            <h3 className="column-title">
-              <i className="fa-solid fa-certificate text-gradient"></i> Certifications
-            </h3>
-            <ul className="acc-list glass-panel">
-              {certifications.map((cert, index) => (
-                <li key={index}>
-                  <i className="fa-solid fa-check-circle list-icon"></i> {cert}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="acc-section">
-            <h3 className="column-title">
-              <i className="fa-solid fa-trophy text-gradient"></i> Achievements
-            </h3>
-            <ul className="acc-list glass-panel">
-              {achievements.map((achieve, index) => (
-                <li key={index}>
-                  <i className="fa-solid fa-star list-icon"></i> {achieve}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-      </div>
+      ))}
     </section>
   );
 };

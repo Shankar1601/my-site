@@ -1,155 +1,87 @@
 /* src/components/Experience.css */
-.timeline-container {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  padding: 20px 0;
+.chelsea-section {
+  width: 100%;
+  padding: 0 var(--spacing-32);
+  margin-bottom: var(--section-gap);
+  background-color: var(--color-void-black);
 }
 
-.timeline-item {
+.experience-block {
   display: flex;
-  margin-bottom: 40px;
-  position: relative;
+  flex-direction: column;
 }
 
-.timeline-item:last-child {
+/* Two-column text grid implementation */
+.text-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--spacing-32);
+}
+
+.meta-column {
+  padding-left: var(--spacing-16);
+}
+
+.meta-label {
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-bold);
+  display: block;
+}
+
+/* Right Column Content */
+.credit-caption {
+  font-size: var(--text-body-sm);
+  color: var(--color-bone-white);
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-16);
+  text-transform: uppercase;
+}
+
+.experience-desc {
+  margin-bottom: var(--spacing-32);
+}
+
+.experience-desc p {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--color-pure-white);
+  margin-bottom: var(--spacing-16);
+}
+
+.experience-desc p:last-child {
   margin-bottom: 0;
 }
 
-/* Timeline Markers */
-.timeline-marker {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 20px;
-  min-width: 20px;
+/* Tech stack modeled after the continuous name roster */
+.roster-listing {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-heading-sm);
+  text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .timeline-marker {
-    margin-right: 40px;
+/* Structural Divider */
+.experience-divider {
+  margin: var(--spacing-96) 0;
+  background-color: var(--color-carbon-slate);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .chelsea-section {
+    padding: 0 var(--spacing-16);
   }
-}
 
-.timeline-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--accent-cyan);
-  box-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan);
-  z-index: 2;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
-
-.timeline-item:hover .timeline-dot {
-  background: var(--accent-purple);
-  box-shadow: 0 0 15px var(--accent-purple), 0 0 30px var(--accent-purple);
-  transform: scale(1.2);
-}
-
-.timeline-line {
-  width: 2px;
-  flex-grow: 1;
-  background: linear-gradient(to bottom, var(--accent-cyan), rgba(0, 243, 255, 0.1));
-  margin-top: 10px;
-  min-height: 50px;
-}
-
-.timeline-item:last-child .timeline-line {
-  background: linear-gradient(to bottom, var(--accent-cyan), transparent);
-}
-
-/* Timeline Content Card */
-.timeline-content {
-  flex-grow: 1;
-  padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-content:hover {
-  transform: translateX(10px);
-}
-
-.timeline-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-@media (min-width: 600px) {
-  .timeline-header {
-    flex-direction: row;
-    align-items: center;
+  .text-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-16);
   }
-}
 
-.timeline-role {
-  font-size: 1.4rem;
-  color: var(--text-primary);
-}
-
-.timeline-date {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-top: 5px;
-}
-
-@media (min-width: 600px) {
-  .timeline-date {
-    margin-top: 0;
+  .meta-column {
+    padding-left: 0;
   }
-}
 
-.timeline-company {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-.timeline-desc {
-  margin-bottom: 20px;
-}
-
-.timeline-desc li {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
-}
-
-.bullet-icon {
-  color: var(--accent-purple);
-  margin-right: 10px;
-  margin-top: 5px;
-  font-size: 0.8rem;
-}
-
-/* Technology Badges */
-.timeline-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tech-badge {
-  font-size: 0.8rem;
-  font-family: var(--font-heading);
-  color: var(--accent-cyan);
-  background: rgba(0, 243, 255, 0.05);
-  border: 1px solid rgba(0, 243, 255, 0.2);
-  padding: 4px 12px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.tech-badge:hover {
-  background: rgba(0, 243, 255, 0.15);
-  border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+  .experience-divider {
+    margin: var(--spacing-32) 0;
+  }
 }
