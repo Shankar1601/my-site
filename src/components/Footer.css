@@ -21,7 +21,7 @@
 }
 
 .footer-wordmark {
-  /* Inherits size from text-heading, this ensures tight alignment with the dot */
+  /* Inherits size from text-heading, this ensures tight alignment with the dot. */
   line-height: 1;
 }
 
