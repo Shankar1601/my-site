@@ -1,16 +1,45 @@
-# React + Vite
+# Shankar A - Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and highly optimized personal portfolio built with React and Vite. The UI has been completely refactored utilizing a custom **Surrealism UI** design system, featuring glassmorphism, ethereal ambient background animations, and neon glowing accents.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Surrealism UI Aesthetic:** Custom CSS architecture featuring floating elements, heavy blurs, glass panels, and seamless keyframe animations.
+- **Modular Architecture:** Cleanly separated React components (Hero, About, Experience, Projects, Skills, Education, Footer) for easy scalability and maintenance.
+- **Mobile-First Responsive Design:** Fluid CSS Grid and Flexbox layouts that adapt perfectly to any screen size without relying heavily on media queries.
+- **SEO Optimized:** Comprehensive meta tags, Open Graph implementation, and semantic HTML structure.
+- **Performance Focused:** Built with Vite for lightning-fast HMR and optimized production builds.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** Custom CSS3 (CSS Variables, Glassmorphism, Keyframes)
+- **Icons:** [FontAwesome](https://fontawesome.com/)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+├── public/
+│   ├── dp.jpg                        # Profile Picture
+│   ├── Shankar_A_Full_Stack...pdf    # Resume
+│   └── BG.jpg                        # Legacy background (optional)
+├── src/
+│   ├── components/                   # Modular React Components
+│   │   ├── About.jsx / .css
+│   │   ├── BackgroundBlobs.jsx
+│   │   ├── Education.jsx / .css
+│   │   ├── Experience.jsx / .css
+│   │   ├── Footer.jsx / .css
+│   │   ├── Hero.jsx / .css
+│   │   ├── Navbar.jsx / .css
+│   │   ├── Projects.jsx / .css
+│   │   └── Skills.jsx / .css
+│   ├── App.jsx                       # Main Application Component
+│   ├── index.css                     # Global Styles & CSS Variables
+│   └── main.jsx                      # React Application Entry Point
+├── index.html                        # HTML Template & SEO Meta Tags
+├── package.json                      # Project Dependencies & Scripts
+├── vercel.json                       # Vercel Deployment Configuration
+└── vite.config.js                    # Vite Configuration
